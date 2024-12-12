@@ -1,0 +1,70 @@
+html{
+    height:100%;
+}
+
+@keyframes pulse {
+    0%, 100% {
+      background-color: #0f0;
+    }
+    50% {
+      background-color: #050;
+    }
+  }
+
+body{
+    display: grid;
+    
+    margin: 0;
+    height: 100%;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    grid-area: header;  
+    padding: 1rem;
+    text-align: center;
+    
+}
+
+main {
+    grid-area: main;
+    padding: 1rem;
+    animation: pulse 3s infinite;
+}
+
+footer {
+    grid-area: footer;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+  grid-area: main;
+  padding: 1rem;
+  animation: pulse 3s infinite;
+  display: grid;
+  margin: 0;
+  height: 100%;
+  grid-template-areas: 
+  "Visual Content";
+  grid-template-columns: 1fr 1fr;
+}
+footer {
+  grid-area: footer;
+  padding: 1rem;
+  text-align: center;
+}
+
+.Content {
+  grid-area: Content;
+  border: 2px;
+}
+
+.Visual {
+  grid-area: Visual;
+  border: 2px;
+}
