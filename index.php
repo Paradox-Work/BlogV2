@@ -13,6 +13,7 @@ $comments = $db->query('SELECT * FROM comments')->fetchAll();
 //dabut bloga ierakstus
 //Searchbar:
 //SELECT * FROM comments WHERE Content LIKE 
+//Next shit is important casue i needed a search bar in the same file though it didnt work to make it here
 if (isset($_GET["search_query"]) && $_GET["search_query"] != ""){
      
 };
