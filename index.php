@@ -7,25 +7,35 @@ echo"woaw<br>";
 
 $db= new Database($config["database"]);
 
-$comments = $db->query('SELECT * FROM comments')->fetchAll();
+
 //$posts = $db->query('SELECT * FROM post');
 //$user = $db->query('SELECT * FROM users WHERE user_id = $id');
 //dabut bloga ierakstus
 //Searchbar:
-//SELECT * FROM comments WHERE Content LIKE 
+//
 //Next shit is important casue i needed a search bar in the same file though it didnt work to make it here
+// Search form
+echo "<form method='GET' action=''>";
+echo "<input type='text' name='search_query'/>"; 
+echo "<button type='submit'>Search</button>";
+echo "</form>";
+$sql="SELECT * FROM comments";
+$params = [];
 if (isset($_GET["search_query"]) && $_GET["search_query"] != ""){
-     
-};
+     //TODO 
+     $search_query = "%" . $_GET["search_query"] . "%";
+      $sql .= " WHERE content LIKE :search_query;";
+     $params = ["search_query" => $search_query];
+    }
+     $comments = $db->query($sql, $params)->fetchAll();
+
+
+
 echo "<ul>";
 foreach ($comments as $post) {
     echo " <li> ID: " . $post['ID'] . "<br> Content: " . $post['Content'] . "</li>";
 }
-dd($comments);
+
 echo "</ul>";
 //meklesanas forma
 //ec
-echo    "<form>";
-echo    "<input name='search_query'/>";
-echo    "<button>Search</button>";
-echo    "</form>";

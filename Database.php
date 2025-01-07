@@ -15,13 +15,12 @@ class Database {
 
 
 //uzstadi metodi query
-public function query($sql){
-         
-            //Sagatavot vaicajumu
-        $statement=$this->pdo->prepare($sql);
-            //Izpilda vaicjumu
-        $statement->execute();
-            //
-        return $comments=$statement;
+public function query($sql, $params){
+    // Prepare the query
+    $statement = $this->pdo->prepare($sql);
+    // Execute the query with parameters
+    $statement->execute($params);
+    // Return the statement object
+    return $statement;
 }
 }
