@@ -80,43 +80,64 @@ text-align: center;
   
 }
 .search-bar {
-  display: flex; /* Align input and button in a single row */
-  align-items: center; /* Align elements vertically */
-  justify-content: center; /* Center the bar in its container */
-  gap: 10px; /* Add space between input and button */
-  margin: 20px auto; /* Add spacing around and center it horizontally */
-}
+    display: flex; /* Arrange input and button horizontally */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center align content */
+   
+    gap: 10px; /* Add spacing between input and button */
+    overflow: visible; /* Allow elements to go beyond parent */
+    margin: 20px auto; /* Center horizontally and add spacing */
+    max-width: 100%; /* Prevent overflow of the entire bar */
+  }
+  .search-bar form {
+    flex-wrap: nowrap;
+  }
+  .search-bar input {
+    padding: 10px 15px; /* Inner padding */
+    font-size: 1rem; /* Text size */
+    border: 2px solid rgba(240, 128, 128, 0.5); /* Border styling */
+    border-radius: 25px; /* Rounded edges */
+    width: 100%; /* Fill the available width */
+    max-width: 400px; /* Prevent input from getting too large */
+    box-sizing: border-box; /* Include padding and borders in size */
+    outline: none; /* Remove default outline on focus */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .search-bar input:focus {
+    border-color: rgba(218, 58, 58, 0.8); /* Highlight border */
+    box-shadow: 0 0 5px rgba(218, 58, 58, 0.5); /* Add glow effect */
+  }
+  
+  .search-bar button {
+    padding: 10px 20px; /* Clickable area */
+    font-size: 1rem; /* Match input size */
+    color: white; /* Text color */
+    background-color: rgba(218, 58, 58, 0.8); /* Button color */
+    border: none; /* Remove border */
+    border-radius: 25px; /* Rounded edges */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .search-bar button:hover {
+    background-color: rgba(240, 128, 128, 1); /* Change color */
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 400px) {
+    .search-bar {
+      flex-direction: column; /* Stack input and button vertically */
+      gap: 5px; /* Adjust spacing */
+    }
+    .search-bar button {
 
-.search-bar input {
-  padding: 10px 15px; /* Add spacing inside the input */
-  font-size: 1rem; /* Make the text readable */
-  border: 2px solid rgba(240, 128, 128, 0.5); /* Match your color theme */
-  border-radius: 25px; /* Rounded corners for the input */
-  width: 100%; /* Allow it to scale dynamically */
-  max-width: 400px; /* Restrict the maximum width */
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
-}
-
-.search-bar input:focus {
-  border-color: rgba(218, 58, 58, 0.8); /* Highlight border on focus */
-  box-shadow: 0 0 5px rgba(218, 58, 58, 0.5); /* Add glow effect */
-}
-
-.search-bar button {
-  padding: 10px 20px; /* Add padding for a clickable area */
-  font-size: 1rem; /* Match input size */
-  color: white; /* Button text color */
-  background-color: rgba(218, 58, 58, 0.8); /* Match your color theme */
-  border: none; /* Remove button border */
-  border-radius: 25px; /* Rounded corners for the button */
-  cursor: pointer; /* Add pointer cursor */
-  transition: background-color 0.3s ease; /* Smooth hover effect */
-}
-
-.search-bar button:hover {
-  background-color: rgba(240, 128, 128, 1); /* Change color on hover */
-}
+      width: 50%; /* Make them both full-width */
+      display: flex; /* Arrange input and button horizontally */
+      align-self: center;
+    }
+  }
+  
 .output{
   background-color: rgba(240, 128, 128, 0.5); /* Background color */
   border-radius: 10px; /* Rounds the corners */
