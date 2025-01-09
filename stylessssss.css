@@ -88,10 +88,9 @@ text-align: center;
     overflow: visible; /* Allow elements to go beyond parent */
     margin: 20px auto; /* Center horizontally and add spacing */
     max-width: 100%; /* Prevent overflow of the entire bar */
+   
   }
-  .search-bar form {
-    flex-wrap: nowrap;
-  }
+
   .search-bar input {
     padding: 10px 15px; /* Inner padding */
     font-size: 1rem; /* Text size */
@@ -118,6 +117,13 @@ text-align: center;
     border-radius: 25px; /* Rounded edges */
     cursor: pointer; /* Pointer cursor */
     transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  .search-bar form{
+    display: flex; /* Arrange input and button horizontally */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center align content */
+    flex-wrap: nowrap;
+    min-width: 200px;
   }
   
   .search-bar button:hover {

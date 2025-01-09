@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-<link rel='stylesheet' href='style.css'>
+<?php require "components/header.php"?>
+<?php require "components/navbar.php"?>
 woaw<br>
 
 <form method='GET' action=''>
@@ -15,6 +7,10 @@ woaw<br>
 <button type='submit'>Search</button>
 </form>
 
+
+<?php if (count($comments) == 0){ ?>
+<p>Not Found</p>
+<?php }; ?>
 
 
 <ul>
@@ -26,6 +22,4 @@ woaw<br>
     <?php } ?>
 </ul>
 
-
-</body>
-</html>
+<?php require "components/footer.php"?>
