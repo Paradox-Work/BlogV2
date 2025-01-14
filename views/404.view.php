@@ -1,6 +1,6 @@
 <?php 
-    require "components/header.php";
+    require "components/navbar.php";
     require "components/header.php";     ?>
-<h1>Reject</h1>
+<h1>You Got Rejected</h1>
 <?php require "components/footer.php"; ?>
 
