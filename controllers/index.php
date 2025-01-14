@@ -11,3 +11,4 @@ if (isset($_GET["search_query"]) && $_GET["search_query"] != "") {
 
 $comments = $db->query($sql, $params)->fetchAll(); // Fetch all the comments matching the query
 $pageTitle = "Daily Bugle"; // Set the title for the homepage
+require "views/index.view.php";
