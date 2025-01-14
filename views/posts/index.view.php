@@ -1,5 +1,5 @@
-<?php require "components/header.php"?>
-<?php require "components/navbar.php"?>
+<?php require "views/components/header.php"?>
+<?php require "views/components/navbar.php"?>
 woaw<br>
 
 <form method='GET' action=''>
@@ -15,11 +15,11 @@ woaw<br>
 
 <ul>
     <?php foreach ($comments as $post) { ?>
-        <li>
+        <li><a href="show?ID=<?= $post["ID"] ?>">
             ID: <?= $post['ID']; ?><br>
             Content: <?= $post['Content']; ?>
-        </li>
+        </a></li>
     <?php } ?>
 </ul>
 
-<?php require "components/footer.php"?>
+<?php require "views/components/footer.php"?>

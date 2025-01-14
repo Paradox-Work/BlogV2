@@ -1,11 +1,4 @@
 <?php
-require "functions.php";
-require "Database.php";
-
-// Load configuration and initialize database
-$config = require "config.php";
-$db = new Database($config["database"]);
-
 // Determine the route
 $uri = parse_url($_SERVER["REQUEST_URI"])["path"];
 $routes = require("routes.php");
