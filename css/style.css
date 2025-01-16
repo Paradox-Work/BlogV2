@@ -27,3 +27,22 @@ header ul li {
   list-style: none;  
   padding: 7px 10px;
 }
+.display {
+  display: flex;
+  align-items: stretch; /* Ensures flex items fill the container */;
+ 
+  width: 100vw; /* Full viewport width */
+  flex: 1;
+}
+.display-search {
+  width: 50%;
+  height: 100%; /* Full viewport height */
+  align-self: center;
+
+  
+}
+.display-output {
+  width: 50%;
+  height: 100%; /* Full viewport height */
+  align-self: center;
+}

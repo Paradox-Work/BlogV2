@@ -1,4 +1,5 @@
-
+<?php require "components/header.php"?>
+<?php require "components/navbar.php"?>
 <link rel='stylesheet' href='style.css'>
 
 <form method='GET' action=''>
@@ -13,3 +14,4 @@
     </li> 
 <?php } ?>
 </ul>
+<?php require "components/footer.php"?>
