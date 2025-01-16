@@ -4,6 +4,7 @@ body, html {
   height: 100%;
 }
 
+
 ul, p {
     color: rgb(219, 39, 39);
 }
@@ -31,9 +32,9 @@ header ul li {
 .display {
   display: flex;
   align-items: stretch; /* Ensures flex items fill the container */;
-  height: 100%;
   width: 100vw; /* Full viewport width */
   flex: 1;
+  height: 100%;
 }
 .display-search {
   width: 50%;
@@ -66,6 +67,8 @@ header ul li {
   border: 1px solid #ddd; /* Optional, to make the list items stand out */
   border-radius: 5px; /* Optional, to add rounded corners */
   background-color: #f9f9f9; /* Optional, background color for the list items */
+  word-wrap: break-word; /* Ensures that long words are wrapped to the next line */
+  overflow-wrap: break-word; /* Ensures that long words break and stay within the container */
 }
 
 .display-output-comments li a {

@@ -1,18 +1,18 @@
 <?php
+require "Validator.php";
 // Initialize an empty array to store potential error messages
-$errors = [];
+
 
 // Check if the form was submitted using the POST method
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
+    $errors = [];
     // Get the length of the "content" input field
-    $size = strlen($_POST["content"]);
 
     // Validate the "content" field:
     // 1. Check if it's not set (missing in the POST data) OR
     // 2. Check if it's empty (length is 0) OR
     // 3. Check if its length exceeds 50 characters
-    if (!isset($_POST["content"]) || $size == 0 || $size > 50) {
+    if (!Validator::string($_POST["content"], max: 50)) {
         // Add an error message to the $errors array if any of the conditions are true
         $errors["content"] = "Saturam jābūt ievadītam, bet ne garākam par 50 rakstzīmēm";
         // Translation: "The content must be entered and cannot be longer than 50 characters"
