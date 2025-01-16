@@ -1,7 +1,4 @@
 <?php
-// Include the view file for the "create post" form
-require "views/posts/create.view.php";
-
 // Initialize an empty array to store potential error messages
 $errors = [];
 
@@ -36,4 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         returnHome();
     }
 }
+// Include the view file for the "create post" form
+require "views/posts/create.view.php";
 ?>

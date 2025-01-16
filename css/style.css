@@ -1,6 +1,7 @@
 body, html {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 ul, p {
@@ -30,7 +31,7 @@ header ul li {
 .display {
   display: flex;
   align-items: stretch; /* Ensures flex items fill the container */;
- 
+  height: 100%;
   width: 100vw; /* Full viewport width */
   flex: 1;
 }
@@ -45,4 +46,33 @@ header ul li {
   width: 50%;
   height: 100%; /* Full viewport height */
   align-self: center;
+}
+.display-output {
+  padding: 20px;
+}
+
+.display-output-comments {
+  display: flex;
+  flex-wrap: wrap; /* Allows the items to wrap to the next line */
+  gap: 20px; /* Adds space between the list items */
+  list-style-type: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+}
+
+.display-output-comments li {
+  width: calc(33.33% - 20px); /* Each list item takes up one-third of the container's width, minus the gap */
+  box-sizing: border-box; /* Ensures padding/margin don't affect the total width */
+  padding: 10px;
+  border: 1px solid #ddd; /* Optional, to make the list items stand out */
+  border-radius: 5px; /* Optional, to add rounded corners */
+  background-color: #f9f9f9; /* Optional, background color for the list items */
+}
+
+.display-output-comments li a {
+  text-decoration: none;
+  color: #333; /* Text color for the links */
+}
+
+.display-output-comments li a:hover {
+  color: #007bff; /* Change color on hover */
 }

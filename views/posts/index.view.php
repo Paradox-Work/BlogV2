@@ -13,7 +13,7 @@
 <p>Not Found</p>
 <?php }; ?>
 
-<ul>
+<ul class="display-output-comments">
     <?php foreach ($comments as $post) { ?>
         <li><a href="show?ID=<?= $post["ID"] ?>">
             ID: <?= $post['ID']; ?><br>
