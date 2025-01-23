@@ -3,10 +3,12 @@
 
     <div class="display">
         <div class="display-search">
+            <div class="display-search-bar">
 <form method='GET' action=''>
 <input type='text' name='search_query' value='<?=$_GET["search_query"] ?? "" ?>'/>
 <button type='submit'>Search</button>
 </form>
+            </div>
         </div>
         <div class="display-output">
 <?php if (count($comments) == 0){ ?>
