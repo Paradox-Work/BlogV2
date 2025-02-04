@@ -9,6 +9,10 @@
 <button type='submit'>Search</button>
 </form>
             </div>
+            <div>
+            <div class="display-search-pfp"></div>
+            <div class="display-search-user"><p>MetroMan</p></div>
+            </div>
         </div>
         <div class="display-output">
 <?php if (count($comments) == 0){ ?>

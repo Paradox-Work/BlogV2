@@ -10,6 +10,10 @@
     <input name="ID" type="hidden" value="<?= $comments["ID"] ?? '' ?>"/>
 
     <!-- Content input field with default content value -->
+    <?php if(isset($errors["content"])): ?>
+       <p><?= $errors["content"] ?></p>
+    <?php endif; ?>
+    
     <input type="text" name="content" value="<?= $comments["Content"] ?? '' ?>"/>
 
     <button type="submit">Submit</button>
