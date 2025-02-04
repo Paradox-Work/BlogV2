@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
         // Prepare the parameters for the SQL query
         $params = [
-            "content" => $_POST["content"],
+            "Content" => $_POST["content"],
             "ID" => $_POST["ID"]  // Make sure the form passes the "id"
         ];
     
