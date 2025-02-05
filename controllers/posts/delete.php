@@ -1,5 +1,4 @@
 <?php 
-aaaaaaaaaaaa
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Assuming the ID is passed via POST data
     $id = $_POST['ID']; // Ensure 'ID' is in the POST data
@@ -11,8 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $params = [":ID" => $id];
     
     // Execute the query
-    $db->query($sql, $params);
-
-    returnHome(null);
+    $db->query($sql, $params);  
 }
+returnHome(null);
 ?>
