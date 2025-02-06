@@ -1,5 +1,5 @@
 <?php 
-    require "views/components/navbar.php";
+    require "views/components/categories/navbar.php";
     require "views/components/header.php"; 
 ?>
 

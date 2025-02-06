@@ -1,5 +1,5 @@
 <?php require "views/components/header.php"?>
-<?php require "views/components/navbar.php"?>
+<?php require "views/components/categories/navbar.php"?>
 
     <div class="display">
         <div class="display-search">

@@ -12,5 +12,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Execute the query
     $db->query($sql, $params);  
 }
-returnHome2(null);
+returnHome(null);
 ?>

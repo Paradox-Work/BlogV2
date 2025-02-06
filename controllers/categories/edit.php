@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $db->query($sql, $params);
     
         // Redirect the user back to the homepage (assumes returnHome() is a defined function)
-        returnHome2($_POST["ID"]);
+        returnHome($_POST["ID"], resourceName : "/categories/");
     }
 }
 // Include the view file for the "edit" form

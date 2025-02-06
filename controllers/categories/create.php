@@ -30,9 +30,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $db->query($sql, $params);
         
         // Redirect the user back to the homepage (assumes returnHome() is a defined function)
-        returnHome2();
+        returnHome(resourceName : "/categories/");
     }
 }
+
 // Include the view file for the "create post" form
 require "views/categories/create.view.php";
 ?>

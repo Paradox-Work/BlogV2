@@ -17,23 +17,13 @@ function redirectIfNotFound2($location = "categories/") {
     exit();
     }
 //-------------------------------------------------
-function returnHome($postID = null) {
+function returnHome($postID = null, $resourceName = "/") {
     if (!$postID) {
-        header("Location: /", true, 302); // Redirect to main page if no ID is provided
+        header("Location: " . $resourceName, true, 302); // Redirect to main page if no ID is provided
         exit();
     }
 
-    $location = "/show?ID=" . urlencode($postID);
-    header("Location: $location", true, 302);
-    exit();
-}
-function returnHome2($postID = null) {
-    if (!$postID) {
-        header("Location: categories/", true, 302); // Redirect to main page if no ID is provided
-        exit();
-    }
-
-    $location = "categories/show?ID=" . urlencode($postID);
+    $location = $resourceName . "show?ID=" . urlencode($postID);
     header("Location: $location", true, 302);
     exit();
 }
