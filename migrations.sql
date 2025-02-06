@@ -8,10 +8,15 @@ Content VARCHAR(1000)
 INSERT INTO Comments(Content)
 VALUES("IM 1");
 SELECT * FROM comments;
-*/
-USE Blog;
+
+/*USE Blog;
 
 SELECT * FROM comments WHERE id = 1;
 
 SELECT * FROM comments WHERE content
-LIKE "Otrais%";
+LIKE "Otrais%";*/
+
+SELECT posts.*, categories.category_name FROM posts
+LEFT JOIN categories
+ON posts.category_id = categories.id
+WHERE posts.id = 1;

@@ -1,8 +1,9 @@
 <?php
 require "Validator.php";
 // Initialize an empty array to store potential error messages
+$sql=["SELECT categories.*, FROM comments JOIN categories"];
 
-
+$params=[];
 // Check if the form was submitted using the POST method
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors = [];
