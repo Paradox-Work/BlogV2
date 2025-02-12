@@ -18,15 +18,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $errors["content"] = "Saturam jābūt ievadītam, bet ne garākam par 50 rakstzīmēm";
         // Translation: "The content must be entered and cannot be longer than 50 characters"
     }
-
+    if (empty($_POST['category'])) { // Ensure category is selected
+        $errors["category"] = "Please select a valid category!";
+    }
+    
     // If there are no errors, proceed to insert the content into the database
     if (empty($errors)) {
         // SQL query to insert the "content" into the "comments" table
-        $sql = "INSERT INTO comments (Content) VALUES (:content)";
+        $sql = "INSERT INTO comments (Content, category_id) VALUES (:content, :category)";
         
         // Prepare the parameters for the SQL query
-        $params = ["content" => $_POST["content"]];
-        
+        $params = [
+            "content" => $_POST["content"],
+            "category" => $_POST["category"]
+        ];
+
         // Execute the query with the provided parameters
         $db->query($sql, $params);
         
